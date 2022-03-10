@@ -7,11 +7,11 @@ import DashboardPage from '../components/dashboard/DashboardPage'
 function Main() {
   return (
     <div>
-        <Routes>
-          <Route exact path='/' element={<LoginPage />} />
-          <Route exact path='/client' element={<ClientPage />} />
-          <Route exact path='/dashbord' element={<DashboardPage />} />
-        </Routes>
+       
+          <Route exact path='/' component={LoginPage} />
+          {/* <Route exact path='/client' element={<ClientPage />} />
+          <Route exact path='/dashbord' element={<DashboardPage />} /> */}
+      
     </div>
   )
 }
