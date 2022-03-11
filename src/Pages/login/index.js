@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 
 function LoginPage() {
-  return (
-    <div>LoginPage</div>
-  )
+    return (
+        <Fragment>
+            <div>LoginPage</div>
+            {/*<p></p>*/}
+        </Fragment>
+    )
 }
 
 export default LoginPage
