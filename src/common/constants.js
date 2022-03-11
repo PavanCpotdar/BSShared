@@ -1,0 +1,15 @@
+const CONSTANTS = {};
+
+CONSTANTS.USERNAME = 'User Name';
+CONSTANTS.PASSWORD = 'Password';
+CONSTANTS.SECURE_LOGIN = 'Secure Login';
+CONSTANTS.EMAIL = 'Email';
+CONSTANTS.OTP = 'OTP';
+
+CONSTANTS.STRINGS_FORGOTPASSWORD = 'Forgot Password ?';
+
+CONSTANTS.STRINGS_COPYRIGHT = 'Copyright © ';
+CONSTANTS.STRINGS_SPACECODE_SAS = 'Spacecode Healthcare S.A. ';
+CONSTANTS.STRINGS_ALLRIGHTSRESERVED = 'All rights reserved. ';
+
+export default CONSTANTS;
