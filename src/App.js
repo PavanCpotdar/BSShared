@@ -1,17 +1,22 @@
-import React, {Fragment} from "react";
-import {Route, Switch} from 'react-router-dom';
+
+import { ThemeProvider } from '@material-ui/styles';
+import { Fragment } from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
+import themePrimary from './common/theme/themePrimary';
 import LoginPage from './Pages/login';
 
 
 function App() {
     return (
         <Fragment>
+            <ThemeProvider theme={themePrimary}>
             {/*<Switch>*/}
-            {/*<Route exact path="/">*/}
+            <Route exact path="/">
             <LoginPage/>
-            {/*</Route>*/}
+            </Route>
             {/*</Switch>*/}
+            </ThemeProvider>
         </Fragment>
     );
 }
