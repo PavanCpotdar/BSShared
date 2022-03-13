@@ -2,6 +2,8 @@ import React, {Fragment} from "react";
 import {useDrawerStyle} from "./style";
 import {List, ListItem, ListItemText, Drawer} from "@material-ui/core";
 import clsx from "clsx";
+import CONSTANTS from "../../common/constants";
+import {Link} from "react-router-dom";
 
 const CustomDrawer = (props) => {
     const {drawerState, drawerToggle} = props;
@@ -11,7 +13,8 @@ const CustomDrawer = (props) => {
     return (
         <Fragment>
 
-            <Drawer variant="permanent" open={drawerState}
+            <Drawer variant="permanent"
+                    open={drawerState}
                     className={clsx(myStyle.root, {
                         [myStyle.drawerOpen]: drawerState,
                         [myStyle.drawerClose]: !drawerState,
@@ -19,21 +22,29 @@ const CustomDrawer = (props) => {
 
                 <List component="nav" className={myStyle.list}>
 
-                    <ListItem button onClick={drawerToggle}>
-                        <ListItemText>Dashboard</ListItemText>
-                    </ListItem>
+                    <Link to={CONSTANTS.LINK_DASHBOARD}>
+                        <ListItem button onClick={drawerToggle}>
+                            <ListItemText>{CONSTANTS.NAME_DASHBOARD}</ListItemText>
+                        </ListItem>
+                    </Link>
 
-                    <ListItem button onClick={drawerToggle}>
-                        <ListItemText>Client</ListItemText>
-                    </ListItem>
+                    <Link to={CONSTANTS.LINK_CLIENT}>
+                        <ListItem button onClick={drawerToggle}>
+                            <ListItemText>{CONSTANTS.NAME_CLIENT}</ListItemText>
+                        </ListItem>
+                    </Link>
 
-                    <ListItem button onClick={drawerToggle}>
-                        <ListItemText>Devices</ListItemText>
-                    </ListItem>
+                    <Link to={CONSTANTS.LINK_DEVICES}>
+                        <ListItem button onClick={drawerToggle}>
+                            <ListItemText>{CONSTANTS.NAME_DEVICES}</ListItemText>
+                        </ListItem>
+                    </Link>
 
-                    <ListItem button onClick={drawerToggle}>
-                        <ListItemText>Settings</ListItemText>
-                    </ListItem>
+                    <Link to={CONSTANTS.LINK_SETTINGS}>
+                        <ListItem button onClick={drawerToggle}>
+                            <ListItemText>{CONSTANTS.NAME_SETTINGS}</ListItemText>
+                        </ListItem>
+                    </Link>
 
                 </List>
             </Drawer>

@@ -5,9 +5,10 @@ import Typography from '@material-ui/core/Typography';
 import {Button, Divider, Grid, List, ListItemText} from "@material-ui/core";
 import {useAppBarStyle} from "./style";
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import Logo from "../../common/logo/Logo";
 
 const CustomHeader = (props) => {
-    const {drawerToggle} = props;
+    const {drawerToggle, title} = props;
     const myStyle = useAppBarStyle();
 
     return (
@@ -16,15 +17,19 @@ const CustomHeader = (props) => {
                 <Grid item xs={12}>
                     <AppBar position="fixed" className={myStyle.appbar}>
                         <Toolbar>
+
                             <div className={myStyle.logo} onClick={drawerToggle}>
-                                <img src="https://dev.bs.spacecode.in/static/media/Picture1.3bfe806c.png"
-                                     alt="Blood Space"/>
+                                <Logo/>
                             </div>
+
                             <Typography variant="h6" component="div">
-                                Dashboard
+                                {title}
                             </Typography>
+
                             <NotificationsIcon/>
+
                             <Divider orientation="vertical" flexItem/>
+
                             <List className={myStyle.list}
                                   component="nav"
                                   aria-labelledby="nested-list-subheader">

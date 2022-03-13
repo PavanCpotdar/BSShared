@@ -1,15 +1,15 @@
 import {makeStyles} from "@material-ui/core/styles";
 
 
-export const useAppBarStyle = makeStyles(() => ({
+export const useAppBarStyle = makeStyles((theme) => ({
     appbar: {
         width: "-webkit-fill-available",
         "& .MuiAppBar-positionSticky": {
             position: "sticky",
         },
         "& .MuiToolbar-root": {
-            backgroundColor: "white",
-            color: "#1e4e79",
+            backgroundColor: theme.palette.colors.white,
+            color: theme.palette.primary.main,
             paddingLeft: "0px"
         },
         "& .MuiToolbar-root .MuiSvgIcon-root": {
@@ -35,7 +35,7 @@ export const useAppBarStyle = makeStyles(() => ({
             textTransform: "capitalize",
             color: "black",
             "&:hover": {
-                backgroundColor: "white",
+                backgroundColor: theme.palette.colors.white,
             }
         },
         "& .MuiToolbar-root .MuiList-root": {
@@ -45,12 +45,13 @@ export const useAppBarStyle = makeStyles(() => ({
     list: {
         width: '100%',
         maxWidth: 360,
-        backgroundColor: 'background.paper',
+        // backgroundColor: 'background.paper',
     },
     logo: {
-        backgroundColor: "#1e4e79",
+        backgroundColor: theme.palette.primary.main,
         height: "65px",
         display: "flex",
         alignItems: "center",
+        width: "230px"
     }
 }));

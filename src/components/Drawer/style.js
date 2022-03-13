@@ -2,12 +2,12 @@ import {makeStyles} from "@material-ui/core/styles";
 
 export const useDrawerStyle = makeStyles((theme) => ({
     root: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.primary.main,
         width: "230px",
         "& .MuiPaper-root": {
             width: "230px",
             marginTop: "65px",
-            backgroundColor: "#1e4e79",
+            backgroundColor: theme.palette.primary.main,
             flexShrink: 0,
             whiteSpace: 'nowrap',
             boxSizing: 'border-box',
@@ -34,15 +34,18 @@ export const useDrawerStyle = makeStyles((theme) => ({
         }
     },
     list: {
+        "& a": {
+            textDecoration: "none",
+        },
         "& .MuiListItem-root": {
             width: "94%",
             margin: "8px auto",
             borderRadius: "6px",
-            color: "white",
+            color: theme.palette.colors.white,
 
             "&:hover": {
-                backgroundColor: "#D9E3EB",
-                color: "#1e4e79"
+                backgroundColor: theme.palette.list.main,
+                color: theme.palette.primary.main,
             },
         }
     },

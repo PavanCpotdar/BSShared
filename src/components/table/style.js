@@ -1,8 +1,8 @@
 import {makeStyles} from "@material-ui/core/styles";
 
-export const useTableStyle = makeStyles(() => ({
+export const useTableStyle = makeStyles((theme) => ({
     tableHead: {
-        backgroundColor: "#deebf7"
+        backgroundColor: theme.palette.primary.light,
     },
     tableCell: {
         "& .MuiTableCell-root": {
@@ -10,11 +10,8 @@ export const useTableStyle = makeStyles(() => ({
         }
     },
     checkBox: {
-        // "& .MuiCheckbox-root ": {
-        //     color: "rgba(0, 0, 0, 0.54)",
-        // },
-        "MuiIconButton-colorSecondary": {
-            color: "blue",
+        "& .MuiFormControlLabel-root": {
+            margin: "auto",
         }
     }
 }))
