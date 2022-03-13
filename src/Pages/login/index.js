@@ -1,6 +1,7 @@
 // import { Card, Grid, Typography } from '@mui/material'
 import {Button, Card, CardContent, Grid, InputLabel, Typography} from '@material-ui/core'
 import React from 'react'
+import { withRouter } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import CONSTANTS from '../../common/constants';
 import Logo from '../../common/logo/Logo';
@@ -8,8 +9,9 @@ import CheckboxComponent from '../../components/checkbox/checKBox';
 import CustomInput from '../../components/inputfield';
 import {useLoginPageStyles} from './style';
 
-function LoginPage() {
 
+function LoginPage(props) {
+console.log("pavan", props);
     const classes = useLoginPageStyles();
 
     return (
@@ -71,6 +73,7 @@ function LoginPage() {
                                     variant="contained"
                                     // color="primary"
                                     className={classes.submitBtn}
+                                    onClick={()=>props.history.push('/dashboard')}
                                 >
                                     Login
                                 </Button>
@@ -80,17 +83,18 @@ function LoginPage() {
                     </Grid>
 
                 </CardContent>
-            </Card>
-
-            <Typography className={classes.copyrightText} variant="body2" align="center">
+                <Typography className={classes.copyrightText} variant="body2" align="center">
                 {CONSTANTS.STRINGS_COPYRIGHT}
                 <Link color="inherit" href="https://spacecode.com/">
                     {CONSTANTS.STRINGS_SPACECODE_SAS}
                 </Link>{' '}
                 {new Date().getFullYear()} {CONSTANTS.STRINGS_ALLRIGHTSRESERVED}
             </Typography>
+            </Card>
+
+          
         </div>
     )
 }
 
-export default LoginPage
+export default withRouter(LoginPage) 

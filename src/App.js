@@ -3,11 +3,13 @@ import {Fragment} from 'react';
 import {Route, Switch} from 'react-router-dom';
 import './App.css';
 import themePrimary from './common/theme/themePrimary';
+import ClientPage from './Pages/client';
+import DashboardPage from './Pages/dashboard';
 import LoginPage from './Pages/login';
 import CONSTANTS from "./common/constants";
 import Dashboard from "./Pages/dashboard";
 import Homepage from "./Pages/homepage";
-import ClientPage from "./Pages/client";
+
 import DevicesPage from "./Pages/Devices";
 import SettingsPage from "./Pages/Settings";
 
