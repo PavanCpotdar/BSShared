@@ -93,9 +93,7 @@ export const useLoginPageStyles = makeStyles(
             marginLeft:80,
             fontWeight:"bold"
         },
-        OTPInputBox: {
-            marginTop: 30
-        },
+   
         loginBtnContainer: {
             marginTop: 40
         },
@@ -103,20 +101,6 @@ export const useLoginPageStyles = makeStyles(
             marginLeft: 310,
             marginTop: 8
         },
-        otpLoginBtn: {
-            marginTop: 30,
-            marginBottom: 20
-        },
-        otpEmailInputBox: {
-            marginTop: 60
-        },
-        signInText: {
-            cursor: 'pointer'
-        },
-        otpSendBtn: {
-            marginTop: 30,
-            marginBottom: 20
-        }
     }),
     { index: 1 }
 );

@@ -76,15 +76,16 @@ function LoginPage() {
           </Grid>
 
         </CardContent>
-      </Card>
-      
-      <Typography className={classes.copyrightText} variant="body2" align="center">
+        <Typography className={classes.copyrightText} variant="body2" align="center">
                 {CONSTANTS.STRINGS_COPYRIGHT}
                 <Link color="inherit" href="https://spacecode.com/">
                     {CONSTANTS.STRINGS_SPACECODE_SAS}
                 </Link>{' '}
                 {new Date().getFullYear()} {CONSTANTS.STRINGS_ALLRIGHTSRESERVED}
             </Typography>
+      </Card>
+      
+      
     </div>
   )
 }
