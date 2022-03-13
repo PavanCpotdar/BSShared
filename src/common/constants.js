@@ -1,5 +1,15 @@
 const CONSTANTS = {};
 
+CONSTANTS.NAME_DASHBOARD = "Dashboard";
+CONSTANTS.NAME_CLIENT = "Client";
+CONSTANTS.NAME_DEVICES = "Devices";
+CONSTANTS.NAME_SETTINGS = "Settings";
+
+CONSTANTS.LINK_DASHBOARD = "/dashboard";
+CONSTANTS.LINK_CLIENT = "/dashboard/client";
+CONSTANTS.LINK_DEVICES = "/dashboard/devices";
+CONSTANTS.LINK_SETTINGS = "/dashboard/settings";
+
 CONSTANTS.USERNAME = 'User Name';
 CONSTANTS.PASSWORD = 'Password';
 CONSTANTS.SECURE_LOGIN = 'Secure Login';
@@ -7,7 +17,6 @@ CONSTANTS.EMAIL = 'Email';
 CONSTANTS.OTP = 'OTP';
 
 CONSTANTS.STRINGS_FORGOTPASSWORD = 'Forgot Password ?';
-
 CONSTANTS.STRINGS_COPYRIGHT = 'Copyright © ';
 CONSTANTS.STRINGS_SPACECODE_SAS = 'Spacecode Healthcare S.A. ';
 CONSTANTS.STRINGS_ALLRIGHTSRESERVED = 'All rights reserved. ';
