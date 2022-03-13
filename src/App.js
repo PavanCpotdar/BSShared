@@ -9,11 +9,11 @@ function App() {
     return (
         <Fragment>
             <Homepage/>
-            <Switch>
-                <Route exact path="/">
-                    <LoginPage/>
-                </Route>
-            </Switch>
+            {/*<Switch>*/}
+            {/*    <Route exact path="/">*/}
+            {/*        <LoginPage/>*/}
+            {/*    </Route>*/}
+            {/*</Switch>*/}
         </Fragment>
     );
 }

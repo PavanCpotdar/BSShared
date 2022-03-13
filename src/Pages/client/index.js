@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {Fragment} from 'react'
+import CustomTable from "../../components/Table";
 
 function ClientPage() {
     return (
-        <div>ClientPage</div>
+        <Fragment>
+            <CustomTable/>
+        </Fragment>
     )
 }
 

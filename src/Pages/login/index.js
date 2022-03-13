@@ -4,7 +4,6 @@ function LoginPage() {
     return (
         <Fragment>
             <div>LoginPage</div>
-            {/*<p></p>*/}
         </Fragment>
     )
 }
