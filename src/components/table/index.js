@@ -15,7 +15,7 @@ import CheckboxComponent from "../checkbox/checKBox";
 
 
 const CustomTable = (props) => {
-    const {columns, rows} = props;
+    const {columns, rows, page, rowsPerPage} = props;
 
 
     const handleChangePage = () => {
@@ -31,7 +31,7 @@ const CustomTable = (props) => {
                 <TableContainer component={Paper}>
                     <Table className="table" aria-label="simple table">
                         <TableHead className={myStyle.tableHead}>
-                            <TableRow className={myStyle.tableCell}>
+                            <TableRow>
                                 {columns.map((column) => (
                                     column.id === "checkBox" ?
                                         <TableCell key={column.id}
@@ -40,6 +40,7 @@ const CustomTable = (props) => {
                                             <CheckboxComponent/>
                                         </TableCell> :
                                         <TableCell key={column.id}
+                                                   className={myStyle.tableCell}
                                                    align={"center"}>
                                             {column.label}
                                         </TableCell>
@@ -48,13 +49,14 @@ const CustomTable = (props) => {
                         </TableHead>
                         <TableBody>
                             {rows.map((row) => (
-                                <TableRow hover role="checkbox" tabIndex={-1} className={myStyle.tableCell}
+                                <TableRow hover role="checkbox" tabIndex={-1}
                                           key={row.name}>
                                     {columns.map((column) => {
                                         switch (column.id) {
                                             case "actions" :
                                                 return (
-                                                    <TableCell key={column.id} align={"center"}>
+                                                    <TableCell key={column.id} align={"center"}
+                                                               className={myStyle.icons}>
                                                         <GetAppIcon/>
                                                         <EditSharpIcon/>
                                                         <DeleteIcon/>
@@ -87,10 +89,11 @@ const CustomTable = (props) => {
                     rowsPerPageOptions={[5, 10, 25]}
                     component="div"
                     count={rows.length}
-                    rowsPerPage={10}
-                    page={0}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
                     onPageChange={handleChangePage}
                     onRowsPerPageChange={handleChangeRowsPerPage}
+                    className={myStyle.pagination}
                 />
             </Paper>
         </Fragment>

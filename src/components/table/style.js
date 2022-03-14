@@ -5,13 +5,31 @@ export const useTableStyle = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.light,
     },
     tableCell: {
-        "& .MuiTableCell-root": {
-            minWidth: "30px"
-        }
+        minWidth: "100px",
+        fontWeight: 600,
+        padding: "8px 3px",
+        color: theme.palette.primary.darkBlue,
     },
     checkBox: {
         "& .MuiFormControlLabel-root": {
             margin: "auto",
+        }
+    },
+    icons: {
+        "& .MuiSvgIcon-root": {
+            width: "20px",
+            margin: "0 2px",
+            cursor: "pointer",
+            color: theme.palette.primary.darkBlue,
+        }
+    },
+    pagination: {
+        color: theme.palette.primary.darkBlue,
+        "& .MuiToolbar-root .MuiTablePagination-spacer": {
+            display: "none"
+        },
+        "& .MuiToolbar-root p:last-of-type": {
+            marginLeft: "auto"
         }
     }
 }))

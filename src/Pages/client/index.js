@@ -31,6 +31,8 @@ function ClientPage() {
             <CustomTable
                 columns={columns}
                 rows={rows}
+                page={0}
+                rowsPerPage={5}
             />
         </Fragment>
     )

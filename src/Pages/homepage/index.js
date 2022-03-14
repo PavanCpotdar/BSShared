@@ -25,7 +25,7 @@ const Homepage = (props) => {
                           drawerToggle={drawerToggleHandler}/>
             <CustomDrawer drawerToggle={drawerToggleHandler} drawerState={openDrawer}/>
             <div className={myStyle.topSpace}>.</div>
-            <div>{props.children}</div>
+            <div className={myStyle.content}>{props.children}</div>
         </Fragment>
     );
 };
