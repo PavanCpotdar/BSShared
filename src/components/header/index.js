@@ -6,6 +6,7 @@ import {Button, Divider, Grid, List, ListItemText} from "@material-ui/core";
 import {useAppBarStyle} from "./style";
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Logo from "../../common/logo/Logo";
+import CustomIcon from "../Icons";
 
 const CustomHeader = (props) => {
     const {drawerToggle, title} = props;
@@ -26,7 +27,7 @@ const CustomHeader = (props) => {
                                 {title}
                             </Typography>
 
-                            <NotificationsIcon/>
+                            <CustomIcon icon={<NotificationsIcon/>}/>
 
                             <Divider orientation="vertical" flexItem/>
 

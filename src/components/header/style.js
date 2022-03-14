@@ -12,7 +12,7 @@ export const useAppBarStyle = makeStyles((theme) => ({
             color: theme.palette.primary.main,
             paddingLeft: "0px"
         },
-        "& .MuiToolbar-root .MuiSvgIcon-root": {
+        "& .MuiToolbar-root .MuiButtonBase-root:first-child": {
             margin: "10px",
             cursor: "pointer",
         },

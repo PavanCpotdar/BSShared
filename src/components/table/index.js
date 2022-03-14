@@ -6,12 +6,13 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {TablePagination} from "@material-ui/core";
+import {IconButton, TablePagination} from "@material-ui/core";
 import GetAppIcon from '@material-ui/icons/GetApp';
 import EditSharpIcon from '@material-ui/icons/EditSharp';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {useTableStyle} from "./style";
 import CheckboxComponent from "../checkbox/checKBox";
+import CustomIcon from "../Icons";
 
 
 const CustomTable = (props) => {
@@ -57,9 +58,9 @@ const CustomTable = (props) => {
                                                 return (
                                                     <TableCell key={column.id} align={"center"}
                                                                className={myStyle.icons}>
-                                                        <GetAppIcon/>
-                                                        <EditSharpIcon/>
-                                                        <DeleteIcon/>
+                                                        <CustomIcon icon={<GetAppIcon/>}/>
+                                                        <CustomIcon icon={<EditSharpIcon/>}/>
+                                                        <CustomIcon icon={<DeleteIcon/>}/>
                                                     </TableCell>
                                                 );
 

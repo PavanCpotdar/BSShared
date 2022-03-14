@@ -16,6 +16,9 @@ export const useTableStyle = makeStyles((theme) => ({
         }
     },
     icons: {
+        "& .MuiButtonBase-root": {
+            padding: "2px"
+        },
         "& .MuiSvgIcon-root": {
             width: "20px",
             margin: "0 2px",
